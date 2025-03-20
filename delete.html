@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WTS Navigation Bar</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles for the navigation */
+        .navbar {
+            padding: 15px 0;
+            background-color: white;
+        }
+        
+        .navbar-brand img {
+            height: 60px;
+        }
+        
+        .nav-link {
+            color: #555 !important;
+            font-weight: 500;
+            padding: 0 15px !important;
+            font-size: 16px;
+        }
+        
+        .nav-item {
+            display: flex;
+            align-items: center;
+        }
+        
+        .dropdown-toggle::after {
+            vertical-align: middle;
+        }
+        
+        .contact-btn {
+            background-color: #d9171e;
+            color: white !important;
+            border-radius: 25px;
+            padding: 10px 30px !important;
+            font-weight: 600;
+        }
+        
+        .contact-btn:hover {
+            background-color: #b8151a;
+        }
+        
+        /* Logo styles */
+        .wts-logo {
+            max-width: 180px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                <img src="https://placehold.co/180x70?text=WTS" alt="WTS Logo" class="wts-logo">
+            </a>
+            
+            <!-- Hamburger Menu for Mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Navigation Items -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">HOME</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="solutionsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            SOLUTIONS
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="solutionsDropdown">
+                            <li><a class="dropdown-item" href="#">Solution 1</a></li>
+                            <li><a class="dropdown-item" href="#">Solution 2</a></li>
+                            <li><a class="dropdown-item" href="#">Solution 3</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            RESOURCES
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="resourcesDropdown">
+                            <li><a class="dropdown-item" href="#">Resource 1</a></li>
+                            <li><a class="dropdown-item" href="#">Resource 2</a></li>
+                            <li><a class="dropdown-item" href="#">Resource 3</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            ABOUT US
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                            <li><a class="dropdown-item" href="#">Our Team</a></li>
+                            <li><a class="dropdown-item" href="#">Our History</a></li>
+                            <li><a class="dropdown-item" href="#">Partners</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">ASSISTANCE</a>
+                    </li>
+                    <li class="nav-item ms-3">
+                        <a class="nav-link contact-btn" href="#">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+    
+</body>
+</html>
