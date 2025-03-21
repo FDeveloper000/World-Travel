@@ -632,11 +632,7 @@ body {
     color: white;
 }
 
-@media (max-width: 767px) {
-    .mb-space {
-        margin-bottom: 30px;
-    }
-}
+
 
 
 /* blue bottombar code */
