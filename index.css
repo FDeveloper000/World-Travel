@@ -816,9 +816,9 @@ body {
     }
     
     .content-wrapper {
-      background-image:  linear-gradient(rgba(255, 255, 255, 0.7), rgba(250, 250, 250, 0.4)), url(assets/architecture-ceiling-contemporary-275286-scaled.jpg);
+      /* background-image:  linear-gradient(rgba(255, 255, 255, 0.7), rgba(250, 250, 250, 0.4)), url(assets/architecture-ceiling-contemporary-275286-scaled.jpg); */
         border-radius: 8px;
-        padding: 30px;
+        /* padding: 30px; */
        background-size: cover;  
        height: 720px;     
     }
