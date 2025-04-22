@@ -11,8 +11,9 @@
 
 .login-text {
     color: white;
-    font-weight: 500;
-    margin-right: 10px;
+    font-weight: 600;
+    margin-right: 18px;
+    font-size: 17px;
 }
 
 .btn-connect {
@@ -33,6 +34,87 @@
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+/* contact button navbar aanimatio */
+/* .btn-contact:hover {
+    background-color: #b91722;
+    color: white;
+} */
+
+
+
+
+.btn-contact-container {
+    position: relative;
+    display: inline-block;
+    padding: 4px;
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+.btn-contact {
+    /* position: relative;
+    background-color: #dc1a22;
+
+    color: white;
+    border: none; */
+
+    /* border-radius: 25px; */
+    /* padding: 8px 32px; */
+    /* font-weight: bold;
+    letter-spacing: 0.5px; */
+
+    z-index: 1;
+    /* transition: all 0.3s ease; */
+}
+
+.border-effect {
+    position: absolute;
+    /* top: 0; */
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, #ff8a00, #ff2a6d);
+    /* z-index: 0; */
+}
+
+.border-left {
+    left: -50%;
+    /* transform-origin: right center; */
+    animation: rotate-left 2s infinite linear;
+}
+
+.border-right {
+    right: -50%;
+    transform-origin: left center;
+    animation: rotate-right 2s infinite linear;
+}
+
+@keyframes rotate-left {
+    0% {
+        transform: translateX(0) rotate(0deg);
+    }
+    50% {
+        transform: translateX(100%) rotate(180deg);
+    }
+    100% {
+        transform: translateX(0) rotate(360deg);
+    }
+}
+
+@keyframes rotate-right {
+    0% {
+        transform: translateX(0) rotate(0deg);
+    }
+    50% {
+        transform: translateX(-100%) rotate(-180deg);
+    }
+    100% {
+        transform: translateX(0) rotate(-360deg);
+    }
+}
+
+
+/* contact button nvbar animation end */
+
 
 .btn-tripsource {
     background-color: transparent;
@@ -64,14 +146,34 @@
 
 @media (max-width: 440px) {
     .trip-source {
-       display: none;
+        display: none;
     }
 }
+
 @media (max-width: 235px) {
-    .connect-navbtn{
-       display: none;
+    .connect-navbtn {
+        display: none;
     }
 }
+
+
+
+.navbar-custom::after {
+    content: "";
+
+    display: block;
+    width: 0;
+    /* height: 2px; */
+    /* background: #fff; */
+    transition: width 0.9s;
+
+}
+
+.navbar-custom:hover::after {
+    width: 100%;
+}
+
+
 
 
 
@@ -114,17 +216,20 @@
 
 .contact-btn:hover {
     background-color: #b8151a;
+    
 }
 
 /* Logo styles */
 .wts-logo {
     max-width: 180px;
-  
+
 }
 
 
 
-/* banner section code */
+
+
+
 
 .banner-section {
     position: relative;
@@ -134,6 +239,39 @@
     background-position: center;
     color: white;
     overflow: hidden;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    animation: changeimage 15s linear infinite;
+}
+
+@keyframes changeimage {
+    0% {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/banner\ 4.jpg');
+
+    }
+
+    25% {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/ani\ 1.jpg');
+
+
+    }
+
+    50%{
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/an\ i2.jpg');
+
+
+    }
+    75%{
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/ani\ 3.jpg');
+
+
+    }
+    100%{
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/banner\ 4.jpg');
+
+
+    }
+
+
 }
 
 .banner-content {
@@ -223,6 +361,38 @@
     line-height: 1.6;
     margin-bottom: 1.2rem;
 }
+
+/* practice button......................................................................................... */
+.learnmoree-button-container{
+    display: flex;
+    align-items: center;
+
+
+    position: relative;
+    display: inline-block;
+    padding: 4px;
+    overflow: hidden;
+    border-radius: 25px;
+  
+
+}
+
+.learnmore-border-effect{
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, #ff8a00, #ff2a6d);
+    position: absolute;
+
+}
+
+.learn-border-left{
+    /* left: -50%; */
+    /* transform-origin: right center; */
+    animation: rotate-left 3s infinite linear;
+
+
+}
+/* practice button........................................................................................end. */
 
 .btn-primary-custom {
     background-color: rgb(246, 167, 4);
@@ -574,7 +744,44 @@ body {
     }
 }
 
+
+
 /* two boxes linear gradiant */
+
+
+ /* Animation keyframes */
+ @keyframes slideInLeft {
+    0% {
+        transform: translatex(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Apply animations to boxes */
+.box-left {
+    animation: slideInLeft 2s ease-out forwards;
+}
+
+.box-right {
+    animation: slideInRight 2s ease-out forwards;
+}
+
+/* waoo */
 
 .cta-container {
     padding: 40px 0;
@@ -598,7 +805,7 @@ body {
 
 .resources-card {
     background: linear-gradient(to bottom, #F9A826, #F39C12);
-    
+
 }
 
 .cta-title {
@@ -746,88 +953,88 @@ body {
 /*booking travel page  2 alll code here........................................................................... */
 
 
-    .bookingtravel-banner-section {
-        position: relative;
-        height: 700px;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/booking\ travel\ banner.jpg');
-        background-size: cover;
-        background-position: center;
-        color: white;
-        overflow: hidden;
+.bookingtravel-banner-section {
+    position: relative;
+    height: 700px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/booking\ travel\ banner.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    overflow: hidden;
 
-    }
-
-    
+}
 
 
-    .hero-section {
-        background-image: linear-gradient(rgba(0, 0, 20, 0.7), rgba(0, 0, 20, 0.4)), url('https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80');
-        background-size: cover;
-        background-position: center;
-        padding: 80px 0;
-        position: relative;
-        min-height: 500px;
-        display: flex;
-        align-items: center;
-    }
-    
-    .hero-content {
-        color: white;
-        position: relative;
-        z-index: 2;
-    }
-    
-    .section-title {
-        color: white;
-        font-weight: 700;
-        font-size: 2.5rem;
-        margin-bottom: 1.5rem;
-        color: #1a237e;
-    }
-    
-    .section-text {
-        font-size: 1.1rem;
-        margin-bottom: 2rem;
-        color: #333;
-        font-weight: bold;
-    }
-    
-    .feature-list {
-        list-style: none;
-        padding-left: 0;
-    }
-    
-    .feature-list li {
-        margin-bottom: 0.75rem;
-        padding-left: 1.5rem;
-        position: relative;
-        color: solid black;
-        font-weight: bold;
-      
-    }
-    
-    .feature-list li::before {
-        content: "•";
-        position: absolute;
-        left: 0;
-        /* color: #1a237e; */
-        font-weight: bold;
-        font-size: 1.2rem;
-    }
-    
+
+
+.hero-section {
+    background-image: linear-gradient(rgba(0, 0, 20, 0.7), rgba(0, 0, 20, 0.4)), url('https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80');
+    background-size: cover;
+    background-position: center;
+    padding: 80px 0;
+    position: relative;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+.section-title {
+    color: white;
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #1a237e;
+}
+
+.section-text {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: #333;
+    font-weight: bold;
+}
+
+.feature-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.feature-list li {
+    margin-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    position: relative;
+    color: solid black;
+    font-weight: bold;
+
+}
+
+.feature-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    /* color: #1a237e; */
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.content-wrapper {
+    /* background-image:  linear-gradient(rgba(255, 255, 255, 0.7), rgba(250, 250, 250, 0.4)), url(assets/architecture-ceiling-contemporary-275286-scaled.jpg); */
+    border-radius: 8px;
+    /* padding: 30px; */
+    background-size: cover;
+    height: 720px;
+}
+
+@media (max-width: 485px) {
     .content-wrapper {
-      /* background-image:  linear-gradient(rgba(255, 255, 255, 0.7), rgba(250, 250, 250, 0.4)), url(assets/architecture-ceiling-contemporary-275286-scaled.jpg); */
-        border-radius: 8px;
-        /* padding: 30px; */
-       background-size: cover;  
-       height: 720px;     
+        height: fit-content;
     }
-
-    @media (max-width: 485px) {
-        .content-wrapper {
-            height: fit-content;
-        }
-    }
+}
 
 /*  booking travel pc section code */
 
@@ -852,7 +1059,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-     margin-bottom: 9rem;
+    margin-bottom: 9rem;
 }
 
 .laptop-image {
@@ -888,16 +1095,16 @@ body {
     .booking-section {
         padding: 40px 0;
     }
-    
+
     .section-title {
         font-size: 2rem;
         text-align: center;
     }
-    
+
     .section-subtitle {
         text-align: center;
     }
-    
+
     .laptop-container {
         margin-bottom: 2rem;
     }
@@ -905,10 +1112,10 @@ body {
 
 /* cost saving page all code */
 
-.cost-banner-section{
+.cost-banner-section {
     position: relative;
     height: 700px;
-    background-image:  url('assets/cost\ saing\ banner.jpg');
+    background-image: url('assets/cost\ saing\ banner.jpg');
     background-size: cover;
     background-position: center;
     color: white;
@@ -917,7 +1124,7 @@ body {
 }
 
 .cost-section-title {
-  color:rgb(22,33,106);
+    color: rgb(22, 33, 106);
     font-style: poppins, sans-serif;
     font-weight: 650;
     margin-bottom: 1.5rem;
@@ -926,7 +1133,7 @@ body {
 
 /* dutyofcare page all code */
 
-.dutycare-banner-section{
+.dutycare-banner-section {
     position: relative;
     height: 700px;
     background-image: url('assets/duty.jpg');
@@ -954,7 +1161,7 @@ body {
 
 .img-dashboard {
     border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .img-mobile {
@@ -965,7 +1172,7 @@ body {
 
 .img-mobile img {
     border-radius: 8px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     width: 100%;
 }
 
@@ -1000,7 +1207,7 @@ p {
     .travel-safety-section {
         padding: 60px 0;
     }
-    
+
     .content-col {
         margin-bottom: 40px;
     }
@@ -1008,7 +1215,7 @@ p {
 
 
 /* global page all code */
-.global-banner-section{
+.global-banner-section {
     position: relative;
     height: 730px;
     background-image: url('assets/global\ banner.jpg');
@@ -1018,21 +1225,23 @@ p {
     overflow: hidden;
 
 }
+
 /* reporting page all code */
 
-.reporting-banner-section{
+.reporting-banner-section {
     position: relative;
     height: 150px;
-    background-image:linear-gradient(rgba(163, 158, 158, 0.8), rgba(161, 154, 154, 0.8)), url('assets/reporting\ banner.jpg');
+    background-image: linear-gradient(rgba(163, 158, 158, 0.8), rgba(161, 154, 154, 0.8)), url('assets/reporting\ banner.jpg');
     background-size: cover;
     background-position: center;
     color: white;
     overflow: hidden;
 }
-.source-logo img{
+
+.source-logo img {
     width: 350px;
     height: 130px;
-    
+
 }
 
 .solutions-banner {
@@ -1071,12 +1280,218 @@ p {
     .solutions-heading {
         font-size: 2rem;
     }
-    
+
     .solutions-banner {
         padding: 40px 0;
     }
 }
 
 
+/* arraners and managers code  ............................................ */
+
+.manager-banner-section {
+    position: relative;
+    height: 650px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url(assets/Mmanagers.jpg);
+    background-size: cover;
+    background-position: top;
+    color: white;
+    overflow: hidden;
+}
+
+.travelers-section {
+    padding: 4rem 0;
+    background-color: #f8f9fa;
+}
+
+.travelers-heading {
+    color: #1a237e;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.travelers-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #212529;
+}
+
+.brand-link {
+    color: #1a237e;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.brand-link:hover {
+    text-decoration: underline;
+}
+
+.travelers-image {
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .travelers-section {
+        padding: 3rem 0;
+    }
+
+    .content-wrapper-li {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+}
 
 
+/* right side text and left side img in aranger and manager */
+.traveler-section {
+    background-color: rgb(246, 246, 246);
+    padding: 60px 0;
+}
+
+.traveler-heading {
+    color: #1a2b69;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.traveler-text {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.brand-link {
+    color: #1a2b69;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.brand-link:hover {
+    text-decoration: underline;
+}
+
+.traveler-image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+@media (max-width: 767.98px) {
+    .traveler-section {
+        padding: 40px 0;
+    }
+
+    .image-container {
+        margin-bottom: 30px;
+    }
+}
+
+/* long heuight img with text in arrangers managers */
+
+.managers-section {
+    background-color: #fff;
+    padding: 60px 0;
+}
+
+.managers-heading {
+    color: #0c2576;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.managers-text {
+    color: #000;
+    line-height: 1.6;
+}
+
+.brand-link {
+    color: #0c2576;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.brand-link:hover {
+    text-decoration: underline;
+}
+
+.managers-image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+@media (max-width: 767.98px) {
+    .managers-section {
+        padding: 40px 0;
+    }
+
+    .text-container {
+        margin-bottom: 30px;
+    }
+}
+
+/* contact page   all code*/
+
+.contact-banner-section {
+    position: relative;
+    height: 700px;
+    background-image: linear-gradient(rgba(0, 0, 20, 0.7), rgba(0, 0, 20, 0.4)), url('assets/contact\ banner.jpg');
+   
+    background-size: cover;
+    background-position: center;
+    color: white;
+    overflow: hidden;
+}
+
+.contact-text{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    /* font-weight: bold; */
+    /* font-size: 16px; */
+    
+    
+}
+
+
+
+.form-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+.form-label {
+    font-weight: 500;
+}
+.required-label {
+    color: #dc3545;
+    font-size: 0.8rem;
+}
+textarea {
+    min-height: 150px;
+}
+.consent-section {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+.form-check-label {
+    font-size: 0.9rem;
+}
+.consent-text {
+    font-size: 0.9rem;
+    /* color: #6c757d; */
+    color: black;
+}
+.btn-submit {
+    padding: 0.7rem 2rem;
+    border-radius: 25px;
+}
+
+/*  */
+
+.finalmsg-congtrol{
+    
+}

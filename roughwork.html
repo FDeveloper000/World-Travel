@@ -163,6 +163,89 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 
         <!-- blue topbar end -->
+
+
+
+
+        <!-- ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc -->
+
+        /* contact button navbar aanimatio */
+
+<!-- .btn-contact:hover {
+    background-color: #b91722;
+    color: white;
+} -->
+
+.border-effect {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, #ff8a00, #ff2a6d);
+    z-index: 0;
+}
+
+.border-left {
+    left: -50%;
+    transform-origin: right center;
+    animation: rotate-left 2s infinite linear;
+}
+
+.border-right {
+    right: -50%;
+    transform-origin: left center;
+    animation: rotate-right 2s infinite linear;
+}
+
+@keyframes rotate-left {
+    0% {
+        transform: translateX(0) rotate(0deg);
+    }
+    50% {
+        transform: translateX(100%) rotate(180deg);
+    }
+    100% {
+        transform: translateX(0) rotate(360deg);
+    }
+}
+
+@keyframes rotate-right {
+    0% {
+        transform: translateX(0) rotate(0deg);
+    }
+    50% {
+        transform: translateX(-100%) rotate(-180deg);
+    }
+    100% {
+        transform: translateX(0) rotate(-360deg);
+    }
+}
+
+.btn-contact-container {
+    position: relative;
+    display: inline-block;
+    padding: 4px;
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+.btn-contact {
+    position: relative;
+    background-color: #dc1a22;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 8px 32px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+/* contact button nvbar animation end */
+
+
+
+        <!-- gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg -->
       
     
 </body>
